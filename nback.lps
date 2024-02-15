@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="nback.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="23"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <TopLine Value="38"/>
+        <CursorPos X="37" Y="47"/>
+        <UsageCount Value="23"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="gamegrid.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="GameGrid"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="7"/>
+        <CursorPos X="22" Y="19"/>
+        <UsageCount Value="23"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../.lazarus/onlinepackagemanager/packages/BGRABitmap/bgrabitmap/bgradefaultbitmap.pas"/>
+        <UnitName Value="BGRADefaultBitmap"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="1804"/>
+        <CursorPos X="15" Y="1811"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../.lazarus/onlinepackagemanager/packages/BGRABitmap/bgrabitmap/unibitmapgeneric.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="645"/>
+        <CursorPos X="3" Y="652"/>
+        <UsageCount Value="10"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="15">
+      <Position>
+        <Filename Value="unit1.pas"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="29" Column="18" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="30" Column="26" TopLine="14"/>
+      </Position>
+      <Position>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="52" Column="32" TopLine="34"/>
+      </Position>
+      <Position>
+        <Filename Value="gamegrid.pas"/>
+        <Caret Line="20" Column="17"/>
+      </Position>
+      <Position>
+        <Filename Value="gamegrid.pas"/>
+        <Caret Line="41" Column="25" TopLine="23"/>
+      </Position>
+      <Position>
+        <Filename Value="gamegrid.pas"/>
+        <Caret Line="40" Column="13" TopLine="23"/>
+      </Position>
+      <Position>
+        <Filename Value="gamegrid.pas"/>
+        <Caret Line="43" Column="29" TopLine="31"/>
+      </Position>
+      <Position>
+        <Filename Value="../../.lazarus/onlinepackagemanager/packages/BGRABitmap/bgrabitmap/bgradefaultbitmap.pas"/>
+        <Caret Line="358" Column="15" TopLine="347"/>
+      </Position>
+      <Position>
+        <Filename Value="../../.lazarus/onlinepackagemanager/packages/BGRABitmap/bgrabitmap/bgradefaultbitmap.pas"/>
+        <Caret Line="1811" Column="15" TopLine="1804"/>
+      </Position>
+      <Position>
+        <Filename Value="gamegrid.pas"/>
+        <Caret Line="23" Column="22" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="gamegrid.pas"/>
+        <Caret Line="25" Column="54" TopLine="14"/>
+      </Position>
+      <Position>
+        <Filename Value="gamegrid.pas"/>
+        <Caret Line="16" Column="16"/>
+      </Position>
+      <Position>
+        <Filename Value="gamegrid.pas"/>
+        <Caret Line="23" Column="25" TopLine="14"/>
+      </Position>
+      <Position>
+        <Filename Value="gamegrid.pas"/>
+        <Caret Line="24" Column="24" TopLine="14"/>
+      </Position>
+      <Position>
+        <Filename Value="gamegrid.pas"/>
+        <Caret Line="59" TopLine="47"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
