@@ -10,7 +10,7 @@ uses
   athreads,
   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, Unit1, GameGrid
+  Forms, Unit1, GameGrid, GameMem, GameRules
   { you can add units after this };
 
 {$R *.res}

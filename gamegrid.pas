@@ -20,11 +20,14 @@ type
   private
     FBitmap: TBGRABitmap;
     FActiveCell: integer;
+    FActiveCellText: string;
 
     procedure SetActiveCell(Value: integer);
+    procedure SetActiveCellText(Value: string);
     procedure DrawActiveCell(Bitmap: TBGRABitmap);
   public
     property ActiveCell: integer read FActiveCell write SetActiveCell;
+    property ActiveCellText: string read FActiveCellText write SetActiveCellText;
     procedure Draw(Canvas: TCanvas);
 
 
@@ -41,10 +44,17 @@ begin
   FActiveCell := Value;
 end;
 
+procedure TGameGrid.SetActiveCellText(Value: string);
+begin
+  FActiveCellText:=Value;
+end;
+
 procedure TGameGrid.DrawActiveCell(Bitmap: TBGRABitmap);
 var
   Width, Height, x, y: integer;
   GridWidth, GridHeight: integer;
+  cellX1, cellY1, cellX2, cellY2: integer;
+  r: TRect;
 begin
   if (FActiveCell < 0) or (FActiveCell > GRID_SIZE * GRID_SIZE) then exit;
 
@@ -57,11 +67,26 @@ begin
   GridWidth := Width div GRID_SIZE;
   GridHeight := Height div GRID_SIZE;
 
-  Bitmap.FillRectAntialias(x * GRID_SIZE + GRID_PADDING,
-    y * GridHeight + GRID_PADDING,
-    x * GridWidth + GridWidth - GRID_PADDING,
-    y * GridHeight + GridHeight - GRID_PADDING,
+  cellX1 := x * GRID_SIZE + GRID_PADDING;
+  cellY1 := y * GridHeight + GRID_PADDING;
+  cellX2 := x * GridWidth + GridWidth - GRID_PADDING;
+  cellY2 := y * GridHeight + GridHeight - GRID_PADDING;
+  Bitmap.FillRectAntialias(cellX1,
+    cellY1,
+    cellX2,
+    cellY2,
     clBlue);
+
+  r := Rect(cellX1, cellY1, cellX2, cellY2);
+  Bitmap.CanvasBGRA.Frame3D(r, 5, bvRaised);
+
+  if FActiveCellText <> '' then
+  begin
+    Bitmap.FontName:='Arial';
+    Bitmap.FontHeight:=58;
+    Bitmap.TextRect(r, FActiveCellText, taCenter, tlCenter, ColorToBGRA(clWhite));
+  end;
+
 end;
 
 procedure TGameGrid.Draw(Canvas: TCanvas);
@@ -92,7 +117,8 @@ end;
 
 constructor TGameGrid.Create;
 begin
-
+  FActiveCellText:='5';
+  FActiveCell:=1;
 end;
 
 destructor TGameGrid.Destroy;

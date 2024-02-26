@@ -25,6 +25,9 @@
     </RunParams>
     <RequiredPackages>
       <Item>
+        <PackageName Value="industrial"/>
+      </Item>
+      <Item>
         <PackageName Value="bgracontrols"/>
       </Item>
       <Item>
@@ -48,6 +51,16 @@
         <Filename Value="gamegrid.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="GameGrid"/>
+      </Unit>
+      <Unit>
+        <Filename Value="gamemem.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="GameMem"/>
+      </Unit>
+      <Unit>
+        <Filename Value="gamerules.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="GameRules"/>
       </Unit>
     </Units>
   </ProjectOptions>

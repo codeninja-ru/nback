@@ -1,21 +1,25 @@
 object MainForm: TMainForm
-  Left = 298
-  Height = 536
-  Top = 108
-  Width = 690
+  Left = 294
+  Height = 594
+  Top = 104
+  Width = 511
   Caption = 'nback'
-  ClientHeight = 536
-  ClientWidth = 690
+  ClientHeight = 594
+  ClientWidth = 511
   Menu = MainMenu
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   LCLVersion = '2.2.2.0'
   object MainPanel: TBCPanel
-    Left = 0
-    Height = 536
-    Top = 0
-    Width = 690
+    Left = 8
+    Height = 578
+    Top = 8
+    Width = 495
     Align = alClient
+    BorderSpacing.Around = 8
+    ChildSizing.LeftRightSpacing = 5
+    ChildSizing.TopBottomSpacing = 10
+    ChildSizing.VerticalSpacing = 5
     Background.Color = clForm
     Background.Gradient1.StartColor = clWhite
     Background.Gradient1.EndColor = clBlack
@@ -46,14 +50,14 @@ object MainForm: TMainForm
     FontEx.ShadowOffsetY = 5
     FontEx.Style = []
     ParentBackground = False
-    Rounding.RoundX = 1
-    Rounding.RoundY = 1
+    Rounding.RoundX = 0
+    Rounding.RoundY = 0
     TabOrder = 0
-    object BCPanel1: TBCPanel
-      Left = 5
+    object StatsPanel: TBCPanel
+      Left = 10
       Height = 81
-      Top = 5
-      Width = 680
+      Top = 15
+      Width = 475
       Align = alTop
       Background.Color = clBtnFace
       Background.Gradient1.StartColor = clWhite
@@ -88,12 +92,50 @@ object MainForm: TMainForm
       Rounding.RoundX = 1
       Rounding.RoundY = 1
       TabOrder = 0
+      object LEDNumber1: TLEDNumber
+        Left = 24
+        Height = 30
+        Top = 24
+        Width = 51
+        BorderStyle = lnbSingle
+        Caption = '040'
+        Columns = 3
+        OnColor = clRed
+      end
+      object LEDNumber2: TLEDNumber
+        Left = 398
+        Height = 30
+        Top = 24
+        Width = 51
+        Anchors = [akTop, akRight]
+        BorderStyle = lnbSingle
+        Caption = '015'
+        Columns = 3
+        OnColor = clRed
+      end
+      object CDButton1: TCDButton
+        AnchorSideLeft.Control = StatsPanel
+        AnchorSideLeft.Side = asrCenter
+        AnchorSideRight.Side = asrCenter
+        Left = 217
+        Height = 38
+        Top = 16
+        Width = 40
+        Caption = '🙂'
+        DrawStyle = dsWin2000
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -20
+        Font.Name = '.SF NS'
+        ParentFont = False
+        TabOrder = 0
+        TabStop = True
+      end
     end
-    object BCPanel2: TBCPanel
-      Left = 5
-      Height = 445
-      Top = 86
-      Width = 680
+    object GamePanel: TBCPanel
+      Left = 10
+      Height = 377
+      Top = 101
+      Width = 475
       Align = alClient
       Background.Color = clBtnFace
       Background.Gradient1.StartColor = clWhite
@@ -128,15 +170,75 @@ object MainForm: TMainForm
       Rounding.RoundY = 1
       TabOrder = 1
       object GameGridPanel: TPanel
+        AnchorSideLeft.Side = asrCenter
         Left = 15
-        Height = 415
+        Height = 347
         Top = 15
-        Width = 650
+        Width = 445
         Align = alClient
         BorderSpacing.Around = 10
         BevelOuter = bvNone
         TabOrder = 0
         OnPaint = GameGridPanelPaint
+      end
+    end
+    object ButtonPanel: TBCPanel
+      Left = 10
+      Height = 80
+      Top = 483
+      Width = 475
+      Align = alBottom
+      Background.Color = clBtnFace
+      Background.Gradient1.StartColor = clWhite
+      Background.Gradient1.EndColor = clBlack
+      Background.Gradient1.GradientType = gtLinear
+      Background.Gradient1.Point1XPercent = 0
+      Background.Gradient1.Point1YPercent = 0
+      Background.Gradient1.Point2XPercent = 0
+      Background.Gradient1.Point2YPercent = 100
+      Background.Gradient2.StartColor = clWhite
+      Background.Gradient2.EndColor = clBlack
+      Background.Gradient2.GradientType = gtLinear
+      Background.Gradient2.Point1XPercent = 0
+      Background.Gradient2.Point1YPercent = 0
+      Background.Gradient2.Point2XPercent = 0
+      Background.Gradient2.Point2YPercent = 100
+      Background.Gradient1EndPercent = 35
+      Background.Style = bbsColor
+      BevelInner = bvLowered
+      BevelOuter = bvNone
+      BevelWidth = 5
+      Border.Style = bboNone
+      FontEx.Color = clDefault
+      FontEx.FontQuality = fqSystemClearType
+      FontEx.Shadow = False
+      FontEx.ShadowRadius = 5
+      FontEx.ShadowOffsetX = 5
+      FontEx.ShadowOffsetY = 5
+      FontEx.Style = []
+      ParentBackground = False
+      Rounding.RoundX = 1
+      Rounding.RoundY = 1
+      TabOrder = 2
+      object CDButton2: TCDButton
+        Left = 24
+        Height = 37
+        Top = 22
+        Width = 120
+        Caption = 'CDButton2'
+        DrawStyle = dsWin2000
+        TabOrder = 0
+        TabStop = True
+      end
+      object CDButton3: TCDButton
+        Left = 317
+        Height = 38
+        Top = 21
+        Width = 123
+        Caption = 'CDButton3'
+        DrawStyle = dsWin2000
+        TabOrder = 1
+        TabStop = True
       end
     end
   end
